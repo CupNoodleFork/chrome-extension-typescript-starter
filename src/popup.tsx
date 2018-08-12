@@ -1,6 +1,7 @@
 import * as moment from 'moment';
 import * as $ from 'jquery';
 import * as React from "react";
+import './style.css';
 
 interface HelloProps { compiler: string; framework: string; }
 

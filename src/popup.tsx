@@ -1,5 +1,10 @@
 import * as moment from 'moment';
 import * as $ from 'jquery';
+import * as React from "react";
+
+interface HelloProps { compiler: string; framework: string; }
+
+const Hello = (props: HelloProps) => (<h1>Hello from {props.compiler} and {props.framework}!</h1>);
 
 let count = 0;
 
@@ -8,7 +13,6 @@ $(function() {
     active: true,
     currentWindow: true
   };
-
   chrome.tabs.query(queryInfo, function(tabs) {
     $('#url').text(tabs[0].url);
     $('#time').text(moment().format('YYYY-MM-DD HH:mm:ss'));
